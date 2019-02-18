@@ -7,12 +7,13 @@ const routes = [{
     },
     {
       path: 'pageEnderecos',
-      component: () => import('pages/pageEnderecos.vue')
+      component: () => import('pages/pageEnderecos.vue'),
+      children: [{
+        path: 'pageTelefones/:id',
+        component: () => import('pages/pageTelefones.vue')
+      }]
     },
-    {
-      path: 'pageTelefones',
-      component: () => import('pages/pageTelefones.vue')
-    }
+
   ]
 }]
 

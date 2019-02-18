@@ -6,7 +6,7 @@
           <q-icon name="menu"/>
         </q-btn>
 
-        <q-toolbar-title class="absolute-center">Testemunho por Telefone</q-toolbar-title>
+        <q-toolbar-title class="absolute-center">Telefones</q-toolbar-title>
       </q-toolbar>
     </q-layout-header>
 
@@ -36,17 +36,19 @@
     </q-layout-drawer>
 
     <q-page-container>
-      <router-view/>
+      <keep-alive>
+        <router-view/>
+      </keep-alive>
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
 export default {
-  data(){
+  data() {
     return {
       leftDrawerOpen: false
-    }
+    };
   },
   name: "MyLayout"
 };

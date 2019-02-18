@@ -6,6 +6,7 @@
       :enderecoSelecionado="endereco"
       inline
       style="max-width: 300px"
+      class="q-ma-md"
     ></endereco>
     <!-- botão pra cadastrar novo endereço -->
   </div>
@@ -21,8 +22,16 @@ export default {
       // carregar enderecos do bd do back
       enderecos: [
         {
+          id: 1,
           endereco: "Rua XXX, 53",
-          ultimaPregacao: new Date().toString()
+          ultimaPregacao: new Date().toString(),
+          telefones: []
+        },
+        {
+          id: 2,
+          endereco: "Rua AAA, 54",
+          ultimaPregacao: new Date().toString(),
+          telefones: []
         }
       ]
     };

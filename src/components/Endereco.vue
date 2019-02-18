@@ -1,8 +1,8 @@
 <template>
-  <q-card>
+  <q-card @click.native="navigateToTelefones">
     <q-card-title>{{enderecoSelecionado.endereco}}</q-card-title>
     <q-card-separator/>
-    <q-card-main>Última pregação: {{enderecoSelecionado.ultimaPregacao}}</q-card-main>
+    <!-- <q-card-main>Última pregação: {{enderecoSelecionado.ultimaPregacao}}</q-card-main> -->
   </q-card>
 </template>
 
@@ -13,7 +13,13 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+    navigateToTelefones() {
+      const id = this.enderecoSelecionado.id.toString();
+      const url = `pageEnderecos/pageTelefones/${id}`;
+      this.$router.push(`${url}`);
+    }
+  }
 };
 </script>
 

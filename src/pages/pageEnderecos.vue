@@ -1,5 +1,6 @@
 <template>
   <q-page padding>
+    <router-view/>
     <grid-enderecos></grid-enderecos>
   </q-page>
 </template>
